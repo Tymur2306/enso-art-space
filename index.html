@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENSO / Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ФІКСОВАНИЙ ЗАДНІЙ ФОН -->
+  <img src="fon.png" alt="Фон" class="global-bg">
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="header__container">
+
+      <a href="#hero" class="logo-wrapper">
+        <span class="logo">ENSO</span>
+        <img src="flower.png" alt="Flower" class="flower">
+      </a>
+
+      <button class="burger" id="burger-btn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav-menu">
+        <a href="#hero" class="nav-inside-logo">ENSO</a>
+
+        <ul class="nav__list">
+          <li><a href="#hero" class="nav__link" data-i18n="nav_works">WORKS</a></li>
+          <li><a href="#about" class="nav__link" data-i18n="nav_about">ABOUT</a></li>
+          <li><a href="#works" class="nav__link" data-i18n="nav_works_title">PORTFOLIO</a></li>
+          <li><a href="#calculator" class="nav__link" data-i18n="nav_price">PRICE</a></li>
+          <li><a href="#contacts" class="nav__link" data-i18n="nav_contacts">CONTACT</a></li>
+        </ul>
+
+        <div class="mobile-menu-footer">
+          <div class="mobile-frog-shadow"></div>
+          <img src="frog-con-2.png" alt="Жаба" class="mobile-artwork-frog">
+        </div>
+      </nav>
+
+      <div class="lang-switch">
+        <a href="#" id="lang-uk">UK</a> / <a href="#" id="lang-en" class="active">EN</a>
+      </div>
+    </div>
+  </header>  
+
+  <!-- СКРОЛ-КОНТЕЙНЕР -->
+  <main class="scroll-container">
+
+    <!-- 1. ГОЛОВНА -->
+    <section id="hero" class="screen-section hero-section">
+      <div class="vertical-text">
+        <span>静けさの中に、異質な美しきを。</span>
+        <div class="seal-icon">窩</div>
+      </div>
+
+      <img src="girl-frog.png" alt="Дівчина" class="artwork-girl">
+      <div class="hero__content">
+        <h1 class="title">ENSO</h1>
+        <p class="subtitle" data-i18n="hero_subtitle">OIL PAINTING ARTIST</p>
+      </div>
+
+      <img src="frog-con-2.png" alt="Жаба" class="artwork-frog">
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </section>
+
+    <!-- 2. ПРО МЕНЕ -->
+    <section id="about" class="screen-section transparent-section">
+      <div class="section-container about-container">
+        <h2 class="about-title" data-i18n="about_title">Про мене</h2>
+        <div class="artist-divider"></div>
+
+        <div class="about-lead">
+          <p data-i18n="about_text_1">Мене звати Малютіна Олександра, я художниця та засновниця власного художнього проєкту. Професійно займаюся живописом уже 6 років.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-col">
+            <p data-i18n="about_text_2">За цей час отримала значний досвід роботи у художній компанії, зокрема в міжнародному середовищі, та мала можливість працювати із замовниками з різних країн.</p>
+            <p data-i18n="about_text_3">Мої роботи вирізняються реалістичністю, увагою до деталей, анатомії, світла й тіні та ретельною передачею фактури. У своїй творчості я поєдную класичний та академічний підхід.</p>
+          </div>
+
+          <div class="about-col">
+            <p data-i18n="about_text_4">Мої картини знаходять своїх власників у різних куточках світу, а географія продажів охоплює міжнародну аудиторію.</p>
+            <p data-i18n="about_text_5">Для мене це новий етап: від роботи всередині компанії — до створення власного простору, підходу та проєкту, який відображає моє бачення мистецтва.</p>
+          </div>
+        </div>
+
+        <div class="about-seal">静</div>
+      </div>
+    </section>
+
+    <!-- 3. ПОРТФОЛІО -->
+    <section id="works" class="screen-section portfolio-section">
+  <h2 data-i18n="works_title">Портфоліо</h2>
+  
+  <div class="portfolio-divider"></div>
+  
+  <div class="portfolio-grid">
+    <!-- ГОЛОВНА КАРТИНА (З різними фото для ПК та телефону) -->
+    <div class="portfolio-main-wrapper">
+      <div class="portfolio-item portfolio-item--main"
+           data-title="Glass Toad"
+           data-year="2025"
+           data-medium="Oil on Linen"
+           data-size="30 x 40 cm"
+           data-desc="Alexandra Maliutina">
+        <img src="girl-frog-4.png" alt="Glass Toad Desktop" class="img-desktop">
+        <img src="girl-frog-3.jpg" alt="Glass Toad Mobile" class="img-mobile">
+      </div>
+    </div>
+
+    <!-- РЕШТА КАРТИН -->
+    <div class="portfolio-item"
+         data-title="Glass Toad"
+         data-year="2025"
+         data-medium="Oil on Linen"
+         data-size="30 x 40 cm"
+         data-desc="Alexandra Maliutina">
+      <img src="p.jpg" alt="Картина 2">
+    </div>
+
+    <div class="portfolio-item"
+         data-title="Vikotes"
+         data-year="2026"
+         data-medium="Oil on Linen"
+         data-size="36 x 48 cm"
+         data-desc="Alexandra Maliutina">
+      <img src="p-5.jpg" alt="Картина 3">
+    </div>
+
+    <div class="portfolio-item"
+         data-title="Seashel"
+         data-year="2022"
+         data-medium="Oil on Linen"
+         data-size="30 x 40 cm"
+         data-desc="Alexandra Maliutina">
+      <img src="p-2.jpg" alt="Картина 4">
+    </div>
+
+    <div class="portfolio-item"
+         data-title="Marble profile"
+         data-year="2024"
+         data-medium="Oil on Linen"
+         data-size="30 x 40 cm"
+         data-desc="Alexandra Maliutina">
+      <img src="p-1.jpg" alt="Картина 5">
+    </div>
+
+    <div class="portfolio-item"
+         data-title="The Lady of the Lake"
+         data-year="2024"
+         data-medium="Oil on Linen"
+         data-size="36 x 48 cm"
+         data-desc="Alexandra Maliutina">
+      <img src="p-4.jpg" alt="Картина 6">
+    </div>
+
+    <div class="portfolio-item"
+         data-title="Bust"
+         data-year="2023"
+         data-medium="Oil on Linen"
+         data-size="30 x 40 cm"
+         data-desc="Alexandra Maliutina">
+      <img src="p-3.jpg" alt="Картина 7">
+    </div>
+  </div>
+
+  <!-- Блок розсіювання -->
+  <div class="portfolio-glow-effect"></div>
+
+</section>
+
+    <!-- КАЛЬКУЛЯТОР -->
+    <section id="calculator" class="screen-section transparent-section calc-page-section fade-element">
+      <div class="section-container">
+        <div class="calculator-card">
+          <h1 data-i18n="calc_title">Price Calculator</h1>
+          <div class="calc-divider"></div>
+
+          <!-- 1. Розмір полотна -->
+          <div class="calc-section">
+            <label for="sizeNativeSelect" data-i18n="calc_size_label">Size</label>
+            <div class="native-select-wrapper">
+              <select id="sizeNativeSelect" class="native-calc-select">
+                <option value="" disabled selected data-i18n="calc_select_default">Select size</option>
+                <option value="30x40">30x40 cm</option>
+                <option value="40x50">40x50 cm</option>
+                <option value="50x70">50x70 cm</option>
+                <option value="60x80">60x80 cm</option>
+                <option value="70x100">70x100 cm</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 2. Вибір типу -->
+          <div class="calc-section">
+            <div class="type-options">
+              <button type="button" class="type-btn active" data-type="people" data-i18n="calc_type_people">People</button>
+              <button type="button" class="type-btn" data-type="animals" data-i18n="calc_type_animals">Animals</button>
+              <button type="button" class="type-btn" data-type="landscape" data-i18n="calc_type_landscape">Landscape</button>
+            </div>
+          </div>
+
+          <!-- 3. Кількість фігур -->
+          <div class="people-options" id="peopleSection">
+            <button type="button" class="people-btn active" data-people="1">
+              <span class="num">1</span>
+              <span class="label" data-i18n="calc_person_label">Person</span>
+            </button>
+            <button type="button" class="people-btn" data-people="2">
+              <span class="num">2</span>
+              <span class="label" data-i18n="calc_person_label">Person</span>
+            </button>
+            <button type="button" class="people-btn" data-people="3">
+              <span class="num">3</span>
+              <span class="label" data-i18n="calc_person_label">Person</span>
+            </button>
+            
+            <button type="button" class="people-btn people-btn-custom" data-people="custom">
+              <textarea id="peopleInlineInput" class="people-inline-input" placeholder="YOUR&#10;OPTION" rows="2"></textarea>
+            </button>
+          </div>
+
+          <!-- Кнопка розрахунку та результат -->
+          <button type="button" class="calculate-btn">
+            <span data-i18n="calc_btn">Calculate Price</span>
+            <span class="arrow">→</span>
+          </button>
+
+          <div class="result-display" id="resultPrice" style="display: none;">
+            Estimated Price: <strong>$0</strong>
+          </div>
+
+          <!-- Примітки знизу -->
+          <div class="calc-notes">
+            <div class="turnaround-title" data-i18n="calc_detail_title">DETAIL & COMPLEXITY</div>
+            <p data-i18n="calc_note_1">The price may vary depending on the level of detail and complexity of the painting.</p>
+            <div class="calc-notes-divider"></div>
+            
+            <div class="turnaround-title" data-i18n="calc_turnaround_title">TURNAROUND TIME</div>
+            <p data-i18n="calc_note_2">The estimated completion time is 4–10 days, depending on the size of the painting. For urgent orders, the additional fee is discussed individually.</p>
+            
+            <div class="calc-notes-divider"></div>
+            <div class="turnaround-title" data-i18n="calc_custom_size_title">CUSTOM SIZE</div>
+            <p data-i18n="calc_note_3">Any size can be requested and discussed individually.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. КОНТАКТИ -->
+  <section id="contacts" class="contacts-page-section">
+      <div class="contacts-container">
+        
+        <div class="contacts-content-wrapper">
+          <h2 data-i18n="contacts_title">Контакти</h2>
+          <div class="contacts-divider"></div>
+          
+          <ul class="contacts-list">
+            <li>
+              <a href="https://instagram.com/enso.artspace" target="_blank" class="contact-link">
+                <div class="contact-icon-box">
+                  <img src="r-1.png" alt="icon" class="contact-svg-icon">
+                </div>
+                <span>@enso.artspace</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/amaliutina" target="_blank" class="contact-link">
+                <div class="contact-icon-box">
+                  <img src="r-2.png" alt="icon" class="contact-svg-icon">
+                </div>
+                <span>@amaliutina</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:maliutinaalexandra@gmail.com" class="contact-link">
+                <div class="contact-icon-box">
+                  <img src="r-4.png" alt="icon" class="contact-svg-icon">
+                </div>
+                <span>maliutinaalexandra@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+380951427353" class="contact-link">
+                <div class="contact-icon-box">
+                  <img src="r-3.png" alt="icon" class="contact-svg-icon">
+                </div>
+                <span>+380 (95) 142 73 53</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="contacts-decor-right">
+        <img src="bamboo-con.png" alt="Бамбук" class="contacts-bamboo">
+        <img src="frog-con-2.png" alt="Жаба" class="contacts-frog">
+      </div>
+    </section>
+
+  </main> <!-- ГОЛОВНИЙ КОНТЕЙНЕР ТЕПЕР ЗАКРИТИЙ ТУТ -->
+
+<div id="artworkModal" class="artwork-modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <div class="modal-body">
+      <div class="modal-image-container">
+        <img id="modalImg" src="" alt="Artwork">
+      </div>
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <p id="modalYear" class="modal-year"></p>
+        <p id="modalMedium" class="modal-medium"></p>
+        <p id="modalSize" class="modal-size"></p>
+        <p id="modalDescription" class="modal-desc"></p>
+        <p class="modal-price-label"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
