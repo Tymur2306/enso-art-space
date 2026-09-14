@@ -396,3 +396,32 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 });
+
+
+// 8. ЛОГІКА МОБІЛЬНОГО БУРГЕР-МЕНЮ
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav');
+
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      nav.classList.toggle('active');
+      
+      // Забороняємо скрол сторінки, коли меню відкрите
+      if (nav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Закривати меню при кліку на будь-який пункт навігації
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      });
+    });
+  }
