@@ -1691,7 +1691,7 @@ html, body {
 }
 
 .contacts-content-wrapper h2 {
-  font-family: 'Cinzel', sans-serif !important;
+  font-family: 'Cinzel', serif !important;
   font-size: 4rem !important;
   font-weight: 100 !important;
   letter-spacing: 4px !important; /* Залиши одне потрібне значення, наприклад 4px або 12px */
@@ -1813,6 +1813,7 @@ html, body {
   }
   .contacts-content-wrapper h2 {
     font-size: 2.2rem !important;
+    font-family: 'Cinzel', serif !important;
   }
   .contacts-divider {
     margin: 10px 0 60px 0 !important;
@@ -1861,7 +1862,7 @@ html, body {
   }
   .contacts-bamboo {
     display: block !important;
-    width: 240px !important;
+    width: 265px !important;
     transform: translateY(10px) !important;
   }
   .contacts-decor-right::after {
