@@ -1663,7 +1663,7 @@ html, body {
 
 
 
-/* --- СЕКЦІЯ КОНТАКТІВ (ПК) --- */
+/* --- СЕКЦІЯ КОНТАКТІВ --- */
 .contacts-page-section {
   position: relative !important;
   width: 100% !important;
@@ -1681,20 +1681,22 @@ html, body {
   justify-content: flex-start !important;
   padding-left: 180px !important;
   box-sizing: border-box !important;
+  z-index: 1 !important; /* Контейнер з текстом буде вище */
 }
 
 .contacts-content-wrapper {
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
-  z-index: 2 !important;
+  position: relative !important;
+  z-index: 10 !important; /* Гарантовано найвищий шар для тексту */
 }
 
 .contacts-content-wrapper h2 {
   font-family: 'Cinzel', serif !important;
   font-size: 4rem !important;
   font-weight: 100 !important;
-  letter-spacing: 4px !important; /* Залиши одне потрібне значення, наприклад 4px або 12px */
+  letter-spacing: 4px !important;
   margin: 0 !important;
   color: #141414 !important;
   text-transform: uppercase !important;
@@ -1704,7 +1706,6 @@ html, body {
   width: 60px !important;
   height: 3px !important;
   background: rgba(20, 20, 20, 0.5) !important;
-  /* Піднімаємо заголовок і лінію вище від списку (зменшено нижній відступ) */
   margin: 20px 0 100px 0 !important;
 }
 
@@ -1714,7 +1715,6 @@ html, body {
   margin: 0 !important;
   display: flex !important;
   flex-direction: column !important;
-  /* Збільшуємо відстань між пунктами на ПК, щоб не були такими щільними */
   gap: 24px !important;
 }
 
@@ -1743,7 +1743,7 @@ html, body {
   opacity: 0.7 !important;
 }
 
-/* Жаба і бамбук в правому нижньому кутку всередині секції */
+/* Декорації (бамбук та жаба) — ставимо на задній фоновий шар */
 .contacts-decor-right {
   position: absolute !important;
   right: 20px !important;
@@ -1751,7 +1751,7 @@ html, body {
   display: flex !important;
   align-items: flex-end !important;
   gap: 10px !important;
-  z-index: 5 !important;
+  z-index: 0 !important; /* Фоновий шар, нижче за текст */
   pointer-events: none !important;
 }
 
@@ -1759,7 +1759,7 @@ html, body {
   width: 400px !important;
   height: auto !important;
   object-fit: contain !important;
-  transform: translateY(10px) !important; /* Витягнуто/піднято бамбук вище на ПК */
+  transform: translateY(10px) !important;
 }
 
 .contacts-frog {
@@ -1791,7 +1791,6 @@ html, body {
   align-items: center !important;
   justify-content: center !important;
   flex-shrink: 0 !important;
-  /* ЖОДНИХ background та background-color тут немає! */
   background: transparent !important;
 }
 
@@ -1799,7 +1798,6 @@ html, body {
   width: 40px !important;
   height: 40px !important;
   object-fit: contain !important;
-  /* Якщо твої картинки іконки чорні з прозорим фоном, прибираємо фільтри взагалі */
   filter: none !important; 
 }
 
@@ -1811,6 +1809,11 @@ html, body {
     align-items: flex-start !important;
     padding-top: 14vh !important;
   }
+  
+  .contacts-content-wrapper {
+    z-index: 10 !important;
+  }
+
   .contacts-content-wrapper h2 {
     font-size: 2.2rem !important;
     font-family: 'Cinzel', serif !important;
@@ -1826,10 +1829,9 @@ html, body {
     font-weight: 600 !important;
     gap: 12px !important;
     white-space: normal !important;
-    word-break: break-all !important; /* Перенос пошти, щоб не вилазила */
+    word-break: break-all !important;
   }
 
-  /* --- Збільшені значки --- */
   .contact-circle,
   .contact-icon-box {
     width: 32px !important;
@@ -1841,21 +1843,20 @@ html, body {
     justify-content: center !important;
   }
 
-  /* Картинки та SVG всередині значків */
   .contact-circle img,
   .contact-svg-icon {
     width: 24px !important;
     height: 24px !important;
     max-width: 24px !important;
     max-height: 24px !important;
-    object-fit: contain !important; /* Зберігає пропорції іконки */
+    object-fit: contain !important;
   }
-  /* ---------------------- */
 
   .contacts-decor-right {
     right: 10px !important;
     bottom: 10px !important;
     gap: 5px !important;
+    z-index: 0 !important; /* Завжди під текстом */
   }
   .contacts-frog {
     width: 150px !important;
