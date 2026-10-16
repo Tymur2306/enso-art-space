@@ -1759,7 +1759,7 @@ html, body {
   width: 400px !important;
   height: auto !important;
   object-fit: contain !important;
-  transform: translateY(10px) !important;
+  transform: translateY(20px) !important;
 }
 
 .contacts-frog {
