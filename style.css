@@ -1022,10 +1022,10 @@ html, body {
 .portfolio-item img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-  background-color: #111 !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
   display: block;
+  background: #111;
 }
 
 /* ЛОГІКА ПЕРЕМИКАННЯ ДЛЯ ПЕРШОГО ЕЛЕМЕНТА НА ПК */
@@ -1034,10 +1034,10 @@ html, body {
 }
 
 .portfolio-item--main .img-desktop {
-  display: block !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
 }
 
 .portfolio-main-wrapper {
